@@ -12,7 +12,7 @@ CODE_EXIT: Final[int] = 0
 memory: List3D = List3D(100, 0)
 pointer: Pos = Pos(0, 0, 0)
 ive: bool = True
-ae: bool = True
+ae: bool = False
 
 class ExitError(Exception): ...
 def inpvalueerror(de: bool) -> None:
@@ -41,7 +41,7 @@ todo = {
 def four_char_a_group(code: str) -> list[str]:
     return [code[i:i+4] for i in range(0, len(code), 4)]
 
-def main(argv: list, argc: int) -> Any:
+def main(argv: list[str], argc: int) -> Any:
     if (argc < 2) or ('--help' in argv) or ('-h' in argv):
         print(Usage)
         return ERROR
